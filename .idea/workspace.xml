@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="bc881647-019a-467c-82c2-2cdddacd6ce2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/app/.editorconfig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.env.example" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Console/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Exceptions/Handler.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Controllers/Controller.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Kernel.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/EncryptCookies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/PreventRequestsDuringMaintenance.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/TrimStrings.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/TrustHosts.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/TrustProxies.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/ValidateSignature.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Http/Middleware/VerifyCsrfToken.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Models/User.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Providers/AppServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Providers/AuthServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Providers/BroadcastServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Providers/EventServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/app/Providers/RouteServiceProvider.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/artisan" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bootstrap/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/bootstrap/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/composer.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/composer.lock" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/app.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/broadcasting.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/cache.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/cors.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/database.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/filesystems.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/hashing.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/logging.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/mail.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/queue.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/sanctum.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/session.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/config/view.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/factories/UserFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2014_10_12_100000_create_password_resets_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2019_08_19_000000_create_failed_jobs_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/migrations/2019_12_14_000001_create_personal_access_tokens_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lang/en/auth.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lang/en/pagination.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lang/en/passwords.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/lang/en/validation.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/phpunit.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/.htaccess" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/index.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/public/robots.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/css/app.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/js/app.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/resources/views/welcome.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/api.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/channels.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/console.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/routes/web.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/app/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/app/public/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/framework/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/framework/cache/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/framework/cache/data/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/framework/sessions/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/framework/testing/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/framework/views/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/storage/logs/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/CreatesApplication.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/Feature/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/TestCase.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/tests/Unit/ExampleTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/help.txt" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="2EtpJ6rrBCTszCCxYMZKP9bNBcg" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="bc881647-019a-467c-82c2-2cdddacd6ce2" name="Changes" comment="" />
+      <created>1663424659517</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1663424659517</updated>
+      <workItem from="1663424661422" duration="8000" />
+      <workItem from="1663425101956" duration="166000" />
+      <workItem from="1663591908534" duration="1103000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
