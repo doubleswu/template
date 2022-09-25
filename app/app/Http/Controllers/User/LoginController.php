@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers\User;
 
+use App\Helper\OutPutHelper;
 use App\Http\Controllers\BaseController;
+use App\Services\User\LoginService;
 use Illuminate\Http\Request;
 
 /**
@@ -19,8 +21,15 @@ class LoginController extends BaseController
             ]);
             $userName = $request -> input('username', '');
             $password = $request -> input('password', '');
+            /** @var $service LoginService */
+            $service = app(LoginService::class);
+            $results = $service -> handler([
+                'username' => $userName,
+                'password' => $password,
+            ]);
+            OutPutHelper::success($results);
         } catch (\Exception $e) {
-            echo $e -> getMessage();
+            OutPutHelper::error($e -> getCode(), $e -> getMessage());
         }
     }
 }
