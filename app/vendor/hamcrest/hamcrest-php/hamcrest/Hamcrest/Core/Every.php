@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\TypeSafeDiagnosingMatcher;
 
 class Every extends TypeSafeDiagnosingMatcher
 {
-
     private $_matcher;
 
     public function __construct(Matcher $matcher)

@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 /*
@@ -14,7 +15,6 @@ use Hamcrest\Util;
  */
 class IsArrayContainingKey extends TypeSafeMatcher
 {
-
     private $_keyMatcher;
 
     public function __construct(Matcher $keyMatcher)

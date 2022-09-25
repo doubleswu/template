@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Type;
 
 class IsBooleanTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Type\IsBoolean::booleanValue();

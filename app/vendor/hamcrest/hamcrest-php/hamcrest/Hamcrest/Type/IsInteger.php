@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsInteger extends IsTypeOf
 {
-
     /**
      * Creates a new instance of IsInteger
      */
@@ -27,6 +27,6 @@ class IsInteger extends IsTypeOf
      */
     public static function integerValue()
     {
-        return new self;
+        return new self();
     }
 }

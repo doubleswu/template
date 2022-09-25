@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class IsEqualIgnoringCaseTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Text\IsEqualIgnoringCase::equalToIgnoringCase('irrelevant');

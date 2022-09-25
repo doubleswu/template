@@ -1,11 +1,11 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 use Hamcrest\AbstractMatcherTest;
 
 class IsArrayContainingInOrderTest extends AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return IsArrayContainingInOrder::arrayContaining(array(1, 2));

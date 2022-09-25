@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Text;
 
 /*
@@ -13,7 +14,6 @@ use Hamcrest\TypeSafeMatcher;
  */
 class IsEqualIgnoringWhiteSpace extends TypeSafeMatcher
 {
-
     private $_string;
 
     public function __construct($string)

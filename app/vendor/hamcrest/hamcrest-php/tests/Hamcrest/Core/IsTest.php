@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class IsTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\Is::is('something');

@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /*
@@ -10,7 +11,6 @@ namespace Hamcrest;
  */
 class StringDescription extends BaseDescription
 {
-
     private $_out;
 
     public function __construct($out = '')

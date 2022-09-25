@@ -1,9 +1,12 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\NodeVisitor;
 
 use function array_pop;
 use function count;
+
 use PhpParser\Node;
 use PhpParser\NodeVisitorAbstract;
 

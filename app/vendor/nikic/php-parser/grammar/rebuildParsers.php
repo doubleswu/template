@@ -65,13 +65,15 @@ foreach ($grammarFileToName as $grammarFile => $name) {
 /// Utility helper functions ///
 ////////////////////////////////
 
-function ensureDirExists($dir) {
+function ensureDirExists($dir)
+{
     if (!is_dir($dir)) {
         mkdir($dir, 0777, true);
     }
 }
 
-function execCmd($cmd) {
+function execCmd($cmd)
+{
     $output = trim(shell_exec("$cmd 2>&1"));
     if ($output !== "") {
         echo "> " . $cmd . "\n";

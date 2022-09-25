@@ -13,14 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
+        Schema::create('t_users', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('user_name',60)->default('')->comment('用户名');
+            $table->string('pass_word',60)->default('')->comment('密码');
             $table->timestamps();
+            $table->index('user_name','idx_c2');
+            $table->comment('后台-登陆用户表');
         });
     }
 
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('t_users');
     }
 };

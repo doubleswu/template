@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Collection;
 
 class IsTraversableWithSizeTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Collection\IsTraversableWithSize::traversableWithSize(

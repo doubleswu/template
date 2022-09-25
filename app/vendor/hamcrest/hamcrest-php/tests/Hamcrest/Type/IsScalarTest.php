@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Type;
 
 class IsScalarTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Type\IsScalar::scalarValue();

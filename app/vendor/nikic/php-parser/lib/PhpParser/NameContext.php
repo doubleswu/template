@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser;
 
@@ -25,7 +27,8 @@ class NameContext
      *
      * @param ErrorHandler $errorHandler Error handling used to report errors
      */
-    public function __construct(ErrorHandler $errorHandler) {
+    public function __construct(ErrorHandler $errorHandler)
+    {
         $this->errorHandler = $errorHandler;
     }
 
@@ -36,7 +39,8 @@ class NameContext
      *
      * @param Name|null $namespace Null is the global namespace
      */
-    public function startNamespace(Name $namespace = null) {
+    public function startNamespace(Name $namespace = null)
+    {
         $this->namespace = $namespace;
         $this->origAliases = $this->aliases = [
             Stmt\Use_::TYPE_NORMAL   => [],
@@ -53,7 +57,8 @@ class NameContext
      * @param int    $type        One of Stmt\Use_::TYPE_*
      * @param array  $errorAttrs Attributes to use to report an error
      */
-    public function addAlias(Name $name, string $aliasName, int $type, array $errorAttrs = []) {
+    public function addAlias(Name $name, string $aliasName, int $type, array $errorAttrs = [])
+    {
         // Constant names are case sensitive, everything else case insensitive
         if ($type === Stmt\Use_::TYPE_CONSTANT) {
             $aliasLookupName = $aliasName;
@@ -71,7 +76,9 @@ class NameContext
             $this->errorHandler->handleError(new Error(
                 sprintf(
                     'Cannot use %s%s as %s because the name is already in use',
-                    $typeStringMap[$type], $name, $aliasName
+                    $typeStringMap[$type],
+                    $name,
+                    $aliasName
                 ),
                 $errorAttrs
             ));
@@ -87,7 +94,8 @@ class NameContext
      *
      * @return null|Name Namespace (or null if global namespace)
      */
-    public function getNamespace() {
+    public function getNamespace()
+    {
         return $this->namespace;
     }
 
@@ -99,7 +107,8 @@ class NameContext
      *
      * @return null|Name Resolved name, or null if static resolution is not possible
      */
-    public function getResolvedName(Name $name, int $type) {
+    public function getResolvedName(Name $name, int $type)
+    {
         // don't resolve special class names
         if ($type === Stmt\Use_::TYPE_NORMAL && $name->isSpecialClassName()) {
             if (!$name->isUnqualified()) {
@@ -142,7 +151,8 @@ class NameContext
      *
      * @return Name Resolved name
      */
-    public function getResolvedClassName(Name $name) : Name {
+    public function getResolvedClassName(Name $name): Name
+    {
         return $this->getResolvedName($name, Stmt\Use_::TYPE_NORMAL);
     }
 
@@ -154,7 +164,8 @@ class NameContext
      *
      * @return Name[] Possible representations of the name
      */
-    public function getPossibleNames(string $name, int $type) : array {
+    public function getPossibleNames(string $name, int $type): array
+    {
         $lcName = strtolower($name);
 
         if ($type === Stmt\Use_::TYPE_NORMAL) {
@@ -210,7 +221,8 @@ class NameContext
      *
      * @return Name Shortest representation
      */
-    public function getShortName(string $name, int $type) : Name {
+    public function getShortName(string $name, int $type): Name
+    {
         $possibleNames = $this->getPossibleNames($name, $type);
 
         // Find shortest name
@@ -224,10 +236,11 @@ class NameContext
             }
         }
 
-       return $shortestName;
+        return $shortestName;
     }
 
-    private function resolveAlias(Name $name, $type) {
+    private function resolveAlias(Name $name, $type)
+    {
         $firstPart = $name->getFirst();
 
         if ($name->isQualified()) {
@@ -250,7 +263,8 @@ class NameContext
         return null;
     }
 
-    private function getNamespaceRelativeName(string $name, string $lcName, int $type) {
+    private function getNamespaceRelativeName(string $name, string $lcName, int $type)
+    {
         if (null === $this->namespace) {
             return new Name($name);
         }
@@ -271,7 +285,8 @@ class NameContext
         return null;
     }
 
-    private function normalizeConstName(string $name) {
+    private function normalizeConstName(string $name)
+    {
         $nsSep = strrpos($name, '\\');
         if (false === $nsSep) {
             return $name;

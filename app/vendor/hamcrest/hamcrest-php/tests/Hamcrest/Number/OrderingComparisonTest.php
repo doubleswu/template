@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Number;
 
 class OrderingComparisonTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Number\OrderingComparison::greaterThan(1);

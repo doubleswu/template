@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Type;
 
 class IsArrayTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Type\IsArray::arrayValue();

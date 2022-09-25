@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 /*
@@ -14,7 +15,6 @@ use Hamcrest\Util;
  */
 class IsCollectionContaining extends TypeSafeMatcher
 {
-
     private $_elementMatcher;
 
     public function __construct(Matcher $elementMatcher)

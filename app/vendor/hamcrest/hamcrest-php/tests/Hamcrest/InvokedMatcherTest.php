@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 use PHPUnit\Framework\TestCase;
@@ -16,7 +17,6 @@ class SampleInvokeMatcher extends BaseMatcherTest
     {
         return $item == $this->matchAgainst;
     }
-
 }
 
 class InvokedMatcherTest extends TestCase

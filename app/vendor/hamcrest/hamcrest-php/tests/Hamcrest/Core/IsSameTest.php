@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class IsSameTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\IsSame::sameInstance(new \stdClass());

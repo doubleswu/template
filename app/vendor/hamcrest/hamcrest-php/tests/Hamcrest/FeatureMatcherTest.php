@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 class Thingy
@@ -31,7 +32,6 @@ class ResultMatcher extends \Hamcrest\FeatureMatcher
 
 class FeatureMatcherTest extends \Hamcrest\AbstractMatcherTest
 {
-
     private $_resultMatcher;
 
     protected function setUp()

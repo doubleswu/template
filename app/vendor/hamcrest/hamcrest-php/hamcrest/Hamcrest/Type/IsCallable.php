@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsCallable extends IsTypeOf
 {
-
     /**
      * Creates a new instance of IsCallable
      */
@@ -32,6 +32,6 @@ class IsCallable extends IsTypeOf
      */
     public static function callableValue()
     {
-        return new self;
+        return new self();
     }
 }

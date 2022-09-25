@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 /*
@@ -19,7 +20,6 @@ use Hamcrest\Util;
  */
 class IsArray extends TypeSafeMatcher
 {
-
     private $_elementMatchers;
 
     public function __construct(array $elementMatchers)

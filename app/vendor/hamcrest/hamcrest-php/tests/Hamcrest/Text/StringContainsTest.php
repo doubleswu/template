@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class StringContainsTest extends \Hamcrest\AbstractMatcherTest
 {
-
     const EXCERPT = 'EXCERPT';
 
     private $_stringContains;

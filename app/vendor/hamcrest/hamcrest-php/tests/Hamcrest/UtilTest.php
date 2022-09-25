@@ -1,11 +1,11 @@
 <?php
+
 namespace Hamcrest;
 
 use PHPUnit\Framework\TestCase;
 
 class UtilTest extends TestCase
 {
-
     public function testWrapValueWithIsEqualLeavesMatchersUntouched()
     {
         $matcher = new \Hamcrest\Text\MatchesPattern('/fo+/');

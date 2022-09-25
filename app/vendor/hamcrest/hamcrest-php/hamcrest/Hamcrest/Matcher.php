@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /*
@@ -22,7 +23,6 @@ namespace Hamcrest;
  */
 interface Matcher extends SelfDescribing
 {
-
     /**
      * Evaluates the matcher for argument <var>$item</var>.
      *

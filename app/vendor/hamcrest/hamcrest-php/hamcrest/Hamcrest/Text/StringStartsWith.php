@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Text;
 
 /*
@@ -10,7 +11,6 @@ namespace Hamcrest\Text;
  */
 class StringStartsWith extends SubstringMatcher
 {
-
     public function __construct($substring)
     {
         parent::__construct($substring);

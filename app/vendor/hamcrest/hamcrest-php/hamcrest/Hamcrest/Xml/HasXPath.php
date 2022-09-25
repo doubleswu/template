@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Xml;
 
 /*
@@ -16,7 +17,6 @@ use Hamcrest\Matcher;
  */
 class HasXPath extends DiagnosingMatcher
 {
-
     /**
      * XPath to apply to the DOM.
      *

@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 use PHPUnit\Framework\TestCase;
@@ -20,7 +21,6 @@ class SampleSelfDescriber implements \Hamcrest\SelfDescribing
 
 class StringDescriptionTest extends TestCase
 {
-
     private $_description;
 
     protected function setUp()

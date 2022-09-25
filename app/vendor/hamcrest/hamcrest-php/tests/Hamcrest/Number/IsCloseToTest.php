@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Number;
 
 class IsCloseToTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         $irrelevant = 0.1;

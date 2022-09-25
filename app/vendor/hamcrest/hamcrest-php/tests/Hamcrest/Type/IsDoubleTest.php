@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Type;
 
 class IsDoubleTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Type\IsDouble::doubleValue();

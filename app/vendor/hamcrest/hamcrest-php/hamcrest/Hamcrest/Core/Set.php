@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 /*
@@ -21,7 +22,6 @@ use Hamcrest\Description;
  */
 class Set extends BaseMatcher
 {
-
     private $_property;
     private $_not;
 

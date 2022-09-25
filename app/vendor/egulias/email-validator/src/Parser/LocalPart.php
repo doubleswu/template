@@ -32,7 +32,7 @@ class LocalPart extends PartParser
     private $localPart = '';
 
 
-    public function parse() : Result
+    public function parse(): Result
     {
         $this->lexer->startRecording();
 
@@ -45,17 +45,19 @@ class LocalPart extends PartParser
                 $dquoteParsingResult = $this->parseDoubleQuote();
 
                 //Invalid double quote parsing
-                if($dquoteParsingResult->isInvalid()) {
+                if ($dquoteParsingResult->isInvalid()) {
                     return $dquoteParsingResult;
                 }
             }
 
-            if ($this->lexer->token['type'] === EmailLexer::S_OPENPARENTHESIS || 
-                $this->lexer->token['type'] === EmailLexer::S_CLOSEPARENTHESIS ) {
+            if (
+                $this->lexer->token['type'] === EmailLexer::S_OPENPARENTHESIS ||
+                $this->lexer->token['type'] === EmailLexer::S_CLOSEPARENTHESIS
+            ) {
                 $commentsResult = $this->parseComments();
 
                 //Invalid comment parsing
-                if($commentsResult->isInvalid()) {
+                if ($commentsResult->isInvalid()) {
                     return $commentsResult;
                 }
             }
@@ -64,7 +66,8 @@ class LocalPart extends PartParser
                 return new InvalidEmail(new ConsecutiveDot(), $this->lexer->token['value']);
             }
 
-            if ($this->lexer->token['type'] === EmailLexer::S_DOT &&
+            if (
+                $this->lexer->token['type'] === EmailLexer::S_DOT &&
                 $this->lexer->isNextToken(EmailLexer::S_AT)
             ) {
                 return new InvalidEmail(new DotAtEnd(), $this->lexer->token['value']);
@@ -81,7 +84,7 @@ class LocalPart extends PartParser
             }
 
             $resultFWS = $this->parseLocalFWS();
-            if($resultFWS->isInvalid()) {
+            if ($resultFWS->isInvalid()) {
                 return $resultFWS;
             }
 
@@ -97,7 +100,7 @@ class LocalPart extends PartParser
         return new ValidEmail();
     }
 
-    protected function validateTokens(bool $hasComments) : Result
+    protected function validateTokens(bool $hasComments): Result
     {
         if (isset(self::INVALID_TOKENS[$this->lexer->token['type']])) {
             return new InvalidEmail(new ExpectingATEXT('Invalid token found'), $this->lexer->token['value']);
@@ -105,12 +108,12 @@ class LocalPart extends PartParser
         return new ValidEmail();
     }
 
-    public function localPart() : string
+    public function localPart(): string
     {
         return $this->localPart;
     }
 
-    private function parseLocalFWS() : Result 
+    private function parseLocalFWS(): Result
     {
         $foldingWS = new FoldingWhiteSpace($this->lexer);
         $resultFWS = $foldingWS->parse();
@@ -120,12 +123,12 @@ class LocalPart extends PartParser
         return $resultFWS;
     }
 
-    private function hasDotAtStart() : bool
+    private function hasDotAtStart(): bool
     {
             return $this->lexer->token['type'] === EmailLexer::S_DOT && null === $this->lexer->getPrevious()['type'];
     }
 
-    private function parseDoubleQuote() : Result
+    private function parseDoubleQuote(): Result
     {
         $dquoteParser = new DoubleQuote($this->lexer);
         $parseAgain = $dquoteParser->parse();
@@ -139,13 +142,13 @@ class LocalPart extends PartParser
         $commentParser = new Comment($this->lexer, new LocalComment());
         $result = $commentParser->parse();
         $this->warnings = array_merge($this->warnings, $commentParser->getWarnings());
-        if($result->isInvalid()) {
+        if ($result->isInvalid()) {
             return $result;
         }
         return $result;
     }
 
-    private function validateEscaping() : Result
+    private function validateEscaping(): Result
     {
         //Backslash found
         if ($this->lexer->token['type'] !== EmailLexer::S_BACKSLASH) {

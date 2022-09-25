@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class CombinableMatcherTest extends \Hamcrest\AbstractMatcherTest
 {
-
     private $_either_3_or_4;
     private $_not_3_and_not_4;
 

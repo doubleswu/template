@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Number;
 
 /*
@@ -10,7 +11,6 @@ use Hamcrest\TypeSafeMatcher;
 
 class OrderingComparison extends TypeSafeMatcher
 {
-
     private $_value;
     private $_minCompare;
     private $_maxCompare;

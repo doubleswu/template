@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Type;
 
 class IsNumericTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Type\IsNumeric::numericValue();

@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class DescribedAsTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\DescribedAs::describedAs('irrelevant', anything());

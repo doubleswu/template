@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /**
@@ -12,7 +13,6 @@ namespace Hamcrest;
 
 abstract class TypeSafeMatcher extends BaseMatcher
 {
-
     /* Types that PHP can compare against */
     const TYPE_ANY = 0;
     const TYPE_STRING = 1;
@@ -73,7 +73,6 @@ abstract class TypeSafeMatcher extends BaseMatcher
     private function _isSafeType($value)
     {
         switch ($this->_expectedType) {
-
             case self::TYPE_ANY:
                 return true;
 
@@ -101,7 +100,6 @@ abstract class TypeSafeMatcher extends BaseMatcher
 
             default:
                 return true;
-
         }
     }
 }

@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class MatchesPatternTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return matchesPattern('/o+b/');

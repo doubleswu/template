@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Number;
 
 /*
@@ -13,7 +14,6 @@ use Hamcrest\TypeSafeMatcher;
  */
 class IsCloseTo extends TypeSafeMatcher
 {
-
     private $_value;
     private $_delta;
 

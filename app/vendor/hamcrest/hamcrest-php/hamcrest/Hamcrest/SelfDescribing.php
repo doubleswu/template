@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /*
@@ -10,7 +11,6 @@ namespace Hamcrest;
  */
 interface SelfDescribing
 {
-
     /**
      * Generates a description of the object.  The description may be part
      * of a description of a larger object of which this is just a component,

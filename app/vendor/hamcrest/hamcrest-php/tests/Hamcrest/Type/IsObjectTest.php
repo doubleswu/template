@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Type;
 
 class IsObjectTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Type\IsObject::objectValue();
@@ -11,7 +11,7 @@ class IsObjectTest extends \Hamcrest\AbstractMatcherTest
 
     public function testEvaluatesToTrueIfArgumentMatchesType()
     {
-        assertThat(new \stdClass, objectValue());
+        assertThat(new \stdClass(), objectValue());
     }
 
     public function testEvaluatesToFalseIfArgumentDoesntMatchType()

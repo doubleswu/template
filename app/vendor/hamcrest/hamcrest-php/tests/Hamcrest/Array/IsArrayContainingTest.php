@@ -1,11 +1,11 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 use Hamcrest\AbstractMatcherTest;
 
 class IsArrayContainingTest extends AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return IsArrayContaining::hasItemInArray('irrelevant');

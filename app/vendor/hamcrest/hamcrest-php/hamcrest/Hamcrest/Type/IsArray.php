@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsArray extends IsTypeOf
 {
-
     /**
      * Creates a new instance of IsArray
      */
@@ -27,6 +27,6 @@ class IsArray extends IsTypeOf
      */
     public static function arrayValue()
     {
-        return new self;
+        return new self();
     }
 }

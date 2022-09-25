@@ -9,7 +9,6 @@ use Egulias\EmailValidator\Result\Reason\ExceptionFound;
 
 class MessageIDValidation implements EmailValidation
 {
-
     /**
      * @var array
      */

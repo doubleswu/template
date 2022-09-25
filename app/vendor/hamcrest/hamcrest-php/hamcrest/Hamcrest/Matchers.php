@@ -13,7 +13,6 @@ namespace Hamcrest;
  */
 class Matchers
 {
-
     /**
      * Evaluates to true only if each $matcher[$i] is satisfied by $array[$i].
      */

@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class IsIdenticalTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\IsIdentical::identicalTo('irrelevant');

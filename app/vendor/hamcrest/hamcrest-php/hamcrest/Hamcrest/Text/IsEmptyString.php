@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Text;
 
 /*
@@ -14,7 +15,6 @@ use Hamcrest\Description;
  */
 class IsEmptyString extends BaseMatcher
 {
-
     private static $_INSTANCE;
     private static $_NULL_OR_EMPTY_INSTANCE;
     private static $_NOT_INSTANCE;

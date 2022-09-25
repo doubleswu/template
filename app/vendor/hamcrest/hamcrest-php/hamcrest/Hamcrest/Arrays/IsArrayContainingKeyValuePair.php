@@ -1,9 +1,11 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 /**
  * Tests for the presence of both a key and value inside an array.
  */
+
 use Hamcrest\Description;
 use Hamcrest\Matcher;
 use Hamcrest\TypeSafeMatcher;
@@ -15,7 +17,6 @@ use Hamcrest\Util;
 
 class IsArrayContainingKeyValuePair extends TypeSafeMatcher
 {
-
     private $_keyMatcher;
     private $_valueMatcher;
 

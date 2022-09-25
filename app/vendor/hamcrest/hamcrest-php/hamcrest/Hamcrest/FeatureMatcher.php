@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /*
@@ -12,7 +13,6 @@ namespace Hamcrest;
  */
 abstract class FeatureMatcher extends TypeSafeDiagnosingMatcher
 {
-
     private $_subMatcher;
     private $_featureDescription;
     private $_featureName;

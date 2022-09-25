@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Internal\SelfDescribingValue;
  */
 abstract class BaseDescription implements Description
 {
-
     public function appendText($text)
     {
         $this->append($text);

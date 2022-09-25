@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\Lexer;
 
@@ -65,14 +67,15 @@ class Emulative extends Lexer
             $emulatorPhpVersion = $emulator->getPhpVersion();
             if ($this->isForwardEmulationNeeded($emulatorPhpVersion)) {
                 $this->emulators[] = $emulator;
-            } else if ($this->isReverseEmulationNeeded($emulatorPhpVersion)) {
+            } elseif ($this->isReverseEmulationNeeded($emulatorPhpVersion)) {
                 $this->emulators[] = new ReverseEmulator($emulator);
             }
         }
     }
 
-    public function startLexing(string $code, ErrorHandler $errorHandler = null) {
-        $emulators = array_filter($this->emulators, function($emulator) use($code) {
+    public function startLexing(string $code, ErrorHandler $errorHandler = null)
+    {
+        $emulators = array_filter($this->emulators, function ($emulator) use ($code) {
             return $emulator->isEmulationNeeded($code);
         });
 
@@ -105,12 +108,14 @@ class Emulative extends Lexer
         }
     }
 
-    private function isForwardEmulationNeeded(string $emulatorPhpVersion): bool {
+    private function isForwardEmulationNeeded(string $emulatorPhpVersion): bool
+    {
         return version_compare(\PHP_VERSION, $emulatorPhpVersion, '<')
             && version_compare($this->targetPhpVersion, $emulatorPhpVersion, '>=');
     }
 
-    private function isReverseEmulationNeeded(string $emulatorPhpVersion): bool {
+    private function isReverseEmulationNeeded(string $emulatorPhpVersion): bool
+    {
         return version_compare(\PHP_VERSION, $emulatorPhpVersion, '>=')
             && version_compare($this->targetPhpVersion, $emulatorPhpVersion, '<');
     }
@@ -119,7 +124,7 @@ class Emulative extends Lexer
     {
         // Patches may be contributed by different emulators.
         // Make sure they are sorted by increasing patch position.
-        usort($this->patches, function($p1, $p2) {
+        usort($this->patches, function ($p1, $p2) {
             return $p1[0] <=> $p2[0];
         });
     }
@@ -171,20 +176,29 @@ class Emulative extends Lexer
                     } else {
                         // Remove from token string
                         $this->tokens[$i][1] = substr_replace(
-                            $token[1], '', $patchPos - $pos + $posDelta, $patchTextLen
+                            $token[1],
+                            '',
+                            $patchPos - $pos + $posDelta,
+                            $patchTextLen
                         );
                         $posDelta -= $patchTextLen;
                     }
                 } elseif ($patchType === 'add') {
                     // Insert into the token string
                     $this->tokens[$i][1] = substr_replace(
-                        $token[1], $patchText, $patchPos - $pos + $posDelta, 0
+                        $token[1],
+                        $patchText,
+                        $patchPos - $pos + $posDelta,
+                        0
                     );
                     $posDelta += $patchTextLen;
-                } else if ($patchType === 'replace') {
+                } elseif ($patchType === 'replace') {
                     // Replace inside the token string
                     $this->tokens[$i][1] = substr_replace(
-                        $token[1], $patchText, $patchPos - $pos + $posDelta, $patchTextLen
+                        $token[1],
+                        $patchText,
+                        $patchPos - $pos + $posDelta,
+                        $patchTextLen
                     );
                 } else {
                     assert(false);
@@ -216,7 +230,8 @@ class Emulative extends Lexer
      *
      * @param Error[] $errors
      */
-    private function fixupErrors(array $errors) {
+    private function fixupErrors(array $errors)
+    {
         foreach ($errors as $error) {
             $attrs = $error->getAttributes();
 
@@ -232,7 +247,7 @@ class Emulative extends Lexer
                 if ($patchType === 'add') {
                     $posDelta += strlen($patchText);
                     $lineDelta += substr_count($patchText, "\n");
-                } else if ($patchType === 'remove') {
+                } elseif ($patchType === 'remove') {
                     $posDelta -= strlen($patchText);
                     $lineDelta -= substr_count($patchText, "\n");
                 }

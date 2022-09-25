@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /**
@@ -8,7 +9,6 @@ namespace Hamcrest;
 
 abstract class TypeSafeDiagnosingMatcher extends TypeSafeMatcher
 {
-
     final public function matchesSafely($item)
     {
         return $this->matchesSafelyWithDiagnosticDescription($item, new NullDescription());

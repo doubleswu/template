@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\Lexer\TokenEmulator;
 
@@ -31,7 +33,8 @@ final class NullsafeTokenEmulator extends TokenEmulator
             }
 
             // Handle ?-> inside encapsed string.
-            if ($tokens[$i][0] === \T_ENCAPSED_AND_WHITESPACE && isset($tokens[$i - 1])
+            if (
+                $tokens[$i][0] === \T_ENCAPSED_AND_WHITESPACE && isset($tokens[$i - 1])
                 && $tokens[$i - 1][0] === \T_VARIABLE
                 && preg_match('/^\?->([a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*)/', $tokens[$i][1], $matches)
             ) {

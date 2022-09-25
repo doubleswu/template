@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class PhpForm
@@ -32,7 +33,6 @@ class BothForms
 
 class HasToStringTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\HasToString::hasToString('foo');

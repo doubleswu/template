@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 /*
@@ -10,7 +11,6 @@ use Hamcrest\Matcher;
 
 class SeriesMatchingOnce
 {
-
     private $_elementMatchers;
     private $_keys;
     private $_mismatchDescription;

@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class IsCollectionContainingTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\IsCollectionContaining::hasItem(equalTo('irrelevant'));

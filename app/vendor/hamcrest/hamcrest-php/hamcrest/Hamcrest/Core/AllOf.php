@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 /*
@@ -15,7 +16,6 @@ use Hamcrest\Util;
  */
 class AllOf extends DiagnosingMatcher
 {
-
     private $_matchers;
 
     public function __construct(array $matchers)

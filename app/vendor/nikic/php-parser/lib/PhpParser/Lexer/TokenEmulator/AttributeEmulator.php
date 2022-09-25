@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\Lexer\TokenEmulator;
 
@@ -11,7 +13,7 @@ final class AttributeEmulator extends TokenEmulator
         return Emulative::PHP_8_0;
     }
 
-    public function isEmulationNeeded(string $code) : bool
+    public function isEmulationNeeded(string $code): bool
     {
         return strpos($code, '#[') !== false;
     }
@@ -43,7 +45,8 @@ final class AttributeEmulator extends TokenEmulator
         return $tokens;
     }
 
-    public function preprocessCode(string $code, array &$patches): string {
+    public function preprocessCode(string $code, array &$patches): string
+    {
         $pos = 0;
         while (false !== $pos = strpos($code, '#[', $pos)) {
             // Replace #[ with %[

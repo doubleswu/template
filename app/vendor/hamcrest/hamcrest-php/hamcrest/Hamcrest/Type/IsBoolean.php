@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsBoolean extends IsTypeOf
 {
-
     /**
      * Creates a new instance of IsBoolean
      */
@@ -27,6 +27,6 @@ class IsBoolean extends IsTypeOf
      */
     public static function booleanValue()
     {
-        return new self;
+        return new self();
     }
 }

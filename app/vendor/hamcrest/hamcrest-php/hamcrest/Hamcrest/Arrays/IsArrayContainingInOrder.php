@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 /*
@@ -13,7 +14,6 @@ use Hamcrest\Util;
  */
 class IsArrayContainingInOrder extends TypeSafeDiagnosingMatcher
 {
-
     private $_elementMatchers;
 
     public function __construct(array $elementMatchers)

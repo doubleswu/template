@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 /*
@@ -13,7 +14,6 @@ use Hamcrest\Description;
  */
 class IsEqual extends BaseMatcher
 {
-
     private $_item;
 
     public function __construct($item)

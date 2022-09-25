@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsObject extends IsTypeOf
 {
-
     /**
      * Creates a new instance of IsObject
      */
@@ -27,6 +27,6 @@ class IsObject extends IsTypeOf
      */
     public static function objectValue()
     {
-        return new self;
+        return new self();
     }
 }

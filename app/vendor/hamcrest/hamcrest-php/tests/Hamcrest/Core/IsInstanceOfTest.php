@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class IsInstanceOfTest extends \Hamcrest\AbstractMatcherTest
 {
-
     private $_baseClassInstance;
     private $_subClassInstance;
 

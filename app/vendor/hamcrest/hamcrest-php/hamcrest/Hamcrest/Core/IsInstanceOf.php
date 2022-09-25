@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 /*
@@ -12,7 +13,6 @@ use Hamcrest\DiagnosingMatcher;
  */
 class IsInstanceOf extends DiagnosingMatcher
 {
-
     private $_theClass;
 
     /**

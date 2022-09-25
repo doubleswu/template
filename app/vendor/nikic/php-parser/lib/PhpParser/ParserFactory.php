@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser;
 
@@ -18,7 +20,8 @@ class ParserFactory
      *
      * @return Parser The parser instance
      */
-    public function create(int $kind, Lexer $lexer = null, array $parserOptions = []) : Parser {
+    public function create(int $kind, Lexer $lexer = null, array $parserOptions = []): Parser
+    {
         if (null === $lexer) {
             $lexer = new Lexer\Emulative();
         }

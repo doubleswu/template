@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -13,7 +14,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsDouble extends IsTypeOf
 {
-
     /**
      * Creates a new instance of IsDouble
      */
@@ -29,6 +29,6 @@ class IsDouble extends IsTypeOf
      */
     public static function doubleValue()
     {
-        return new self;
+        return new self();
     }
 }

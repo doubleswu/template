@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class StringContainsInOrderTest extends \Hamcrest\AbstractMatcherTest
 {
-
     private $_m;
 
     protected function setUp()

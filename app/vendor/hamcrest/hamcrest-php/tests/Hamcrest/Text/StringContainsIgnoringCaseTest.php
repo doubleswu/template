@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class StringContainsIgnoringCaseTest extends \Hamcrest\AbstractMatcherTest
 {
-
     const EXCERPT = 'ExcErPt';
 
     private $_stringContains;

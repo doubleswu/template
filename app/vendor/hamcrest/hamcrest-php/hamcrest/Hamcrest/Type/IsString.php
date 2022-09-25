@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsString extends IsTypeOf
 {
-
     /**
      * Creates a new instance of IsString
      */
@@ -27,6 +27,6 @@ class IsString extends IsTypeOf
      */
     public static function stringValue()
     {
-        return new self;
+        return new self();
     }
 }

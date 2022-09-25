@@ -116,6 +116,15 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/simple-cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/http-client" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/casbin/casbin" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/s1lentium/iptools" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/cache-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/var-exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/symfony/expression-language" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/cache" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/casbin/database-adapter" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/techone/database" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

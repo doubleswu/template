@@ -23,5 +23,4 @@ class ValidEmail implements Result
     {
         return 0;
     }
-
 }

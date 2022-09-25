@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Text;
 
 /*
@@ -12,7 +13,6 @@ use Hamcrest\TypeSafeMatcher;
  */
 class StringContainsInOrder extends TypeSafeMatcher
 {
-
     private $_substrings;
 
     public function __construct(array $substrings)

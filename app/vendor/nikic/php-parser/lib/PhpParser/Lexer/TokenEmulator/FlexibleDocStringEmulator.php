@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\Lexer\TokenEmulator;
 
@@ -17,7 +19,7 @@ REGEX;
         return Emulative::PHP_7_3;
     }
 
-    public function isEmulationNeeded(string $code) : bool
+    public function isEmulationNeeded(string $code): bool
     {
         return strpos($code, '<<<') !== false;
     }
@@ -34,8 +36,9 @@ REGEX;
         return $tokens;
     }
 
-    public function preprocessCode(string $code, array &$patches): string {
-        if (!preg_match_all(self::FLEXIBLE_DOC_STRING_REGEX, $code, $matches, PREG_SET_ORDER|PREG_OFFSET_CAPTURE)) {
+    public function preprocessCode(string $code, array &$patches): string
+    {
+        if (!preg_match_all(self::FLEXIBLE_DOC_STRING_REGEX, $code, $matches, PREG_SET_ORDER | PREG_OFFSET_CAPTURE)) {
             // No heredoc/nowdoc found
             return $code;
         }

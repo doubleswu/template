@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class SetTest extends \Hamcrest\AbstractMatcherTest
 {
-
     public static $_classProperty;
     public $_instanceProperty;
 

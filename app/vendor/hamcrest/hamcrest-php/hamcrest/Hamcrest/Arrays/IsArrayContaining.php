@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 /*
@@ -14,7 +15,6 @@ use Hamcrest\Util;
  */
 class IsArrayContaining extends TypeSafeMatcher
 {
-
     private $_elementMatcher;
 
     public function __construct(Matcher $elementMatcher)

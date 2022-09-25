@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Text;
 
 /*
@@ -10,7 +11,6 @@ use Hamcrest\TypeSafeMatcher;
 
 abstract class SubstringMatcher extends TypeSafeMatcher
 {
-
     protected $_substring;
 
     public function __construct($substring)

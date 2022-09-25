@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class DummyToStringClass
@@ -18,7 +19,6 @@ class DummyToStringClass
 
 class IsEqualTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\IsEqual::equalTo('irrelevant');

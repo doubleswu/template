@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /*
@@ -7,7 +8,6 @@ namespace Hamcrest;
 
 class MatcherAssert
 {
-
     /**
      * Number of assertions performed.
      *

@@ -1,11 +1,11 @@
 <?php return array(
     'root' => array(
-        'pretty_version' => 'v9.3.8',
-        'version' => '9.3.8.0',
+        'pretty_version' => 'dev-main',
+        'version' => 'dev-main',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => NULL,
+        'reference' => '1f288eb8ec2423ff4857be2f545aafa58f424394',
         'name' => 'laravel/laravel',
         'dev' => true,
     ),
@@ -17,6 +17,24 @@
             'install_path' => __DIR__ . '/../brick/math',
             'aliases' => array(),
             'reference' => '459f2781e1a08d52ee56b0b1444086e038561e3f',
+            'dev_requirement' => false,
+        ),
+        'casbin/casbin' => array(
+            'pretty_version' => 'v3.21.1',
+            'version' => '3.21.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../casbin/casbin',
+            'aliases' => array(),
+            'reference' => '5ad4fb460c10d81af4506af1daa899e34b587796',
+            'dev_requirement' => false,
+        ),
+        'casbin/database-adapter' => array(
+            'pretty_version' => 'v1.6.1',
+            'version' => '1.6.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../casbin/database-adapter',
+            'aliases' => array(),
+            'reference' => '6fb213b4ce3991bc95317538eb3f6c0b945d2e99',
             'dev_requirement' => false,
         ),
         'cordoval/hamcrest-php' => array(
@@ -365,12 +383,12 @@
             'dev_requirement' => false,
         ),
         'laravel/laravel' => array(
-            'pretty_version' => 'v9.3.8',
-            'version' => '9.3.8.0',
+            'pretty_version' => 'dev-main',
+            'version' => 'dev-main',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => NULL,
+            'reference' => '1f288eb8ec2423ff4857be2f545aafa58f424394',
             'dev_requirement' => false,
         ),
         'laravel/pint' => array(
@@ -622,6 +640,21 @@
             'reference' => 'd0aa6097bef9fd42458a9b3c49da32c6ce6129c5',
             'dev_requirement' => true,
         ),
+        'psr/cache' => array(
+            'pretty_version' => '3.0.0',
+            'version' => '3.0.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../psr/cache',
+            'aliases' => array(),
+            'reference' => 'aa5030cfa5405eccfdcb1083ce040c2cb8d253bf',
+            'dev_requirement' => false,
+        ),
+        'psr/cache-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '2.0|3.0',
+            ),
+        ),
         'psr/container' => array(
             'pretty_version' => '2.0.2',
             'version' => '2.0.2.0',
@@ -709,8 +742,8 @@
         'psr/log-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.0|2.0|3.0',
-                1 => '1.0.0 || 2.0.0 || 3.0.0',
+                0 => '1.0.0 || 2.0.0 || 3.0.0',
+                1 => '1.0|2.0|3.0',
             ),
         ),
         'psr/simple-cache' => array(
@@ -769,6 +802,15 @@
             'replaced' => array(
                 0 => '4.5.1',
             ),
+        ),
+        's1lentium/iptools' => array(
+            'pretty_version' => 'v1.1.1',
+            'version' => '1.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../s1lentium/iptools',
+            'aliases' => array(),
+            'reference' => 'f6f8ab6132ca7443bd7cced1681f5066d725fd5f',
+            'dev_requirement' => false,
         ),
         'sebastian/cli-parser' => array(
             'pretty_version' => '1.0.1',
@@ -950,6 +992,30 @@
             'reference' => '192962f4d84526f6868c512530c00633e3165749',
             'dev_requirement' => true,
         ),
+        'symfony/cache' => array(
+            'pretty_version' => 'v6.1.3',
+            'version' => '6.1.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/cache',
+            'aliases' => array(),
+            'reference' => '5cf8e75f02932818889e0609380b8d5427a6c86c',
+            'dev_requirement' => false,
+        ),
+        'symfony/cache-contracts' => array(
+            'pretty_version' => 'v3.1.1',
+            'version' => '3.1.1.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/cache-contracts',
+            'aliases' => array(),
+            'reference' => '2eab7fa459af6d75c6463e63e633b667a9b761d3',
+            'dev_requirement' => false,
+        ),
+        'symfony/cache-implementation' => array(
+            'dev_requirement' => false,
+            'provided' => array(
+                0 => '1.1|2.0|3.0',
+            ),
+        ),
         'symfony/console' => array(
             'pretty_version' => 'v6.1.4',
             'version' => '6.1.4.0',
@@ -1009,6 +1075,15 @@
             'provided' => array(
                 0 => '2.0|3.0',
             ),
+        ),
+        'symfony/expression-language' => array(
+            'pretty_version' => 'v6.1.3',
+            'version' => '6.1.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/expression-language',
+            'aliases' => array(),
+            'reference' => 'ccd57a54d24dcf6e6c6a0d4eda7042f0861c5b13',
+            'dev_requirement' => false,
         ),
         'symfony/finder' => array(
             'pretty_version' => 'v6.1.3',
@@ -1212,6 +1287,24 @@
             'install_path' => __DIR__ . '/../symfony/var-dumper',
             'aliases' => array(),
             'reference' => 'd5a5e44a2260c5eb5e746bf4f1fbd12ee6ceb427',
+            'dev_requirement' => false,
+        ),
+        'symfony/var-exporter' => array(
+            'pretty_version' => 'v6.1.3',
+            'version' => '6.1.3.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/var-exporter',
+            'aliases' => array(),
+            'reference' => 'b49350f45cebbba6e5286485264b912f2bcfc9ef',
+            'dev_requirement' => false,
+        ),
+        'techone/database' => array(
+            'pretty_version' => 'v0.2',
+            'version' => '0.2.0.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../techone/database',
+            'aliases' => array(),
+            'reference' => 'd78d2fa3543592d567bd52ee30cfbb17e5cd370e',
             'dev_requirement' => false,
         ),
         'theseer/tokenizer' => array(

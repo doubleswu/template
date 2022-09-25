@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest;
 
 /*
@@ -13,7 +14,6 @@ namespace Hamcrest;
  */
 interface Description
 {
-
     /**
      * Appends some plain text to the description.
      *

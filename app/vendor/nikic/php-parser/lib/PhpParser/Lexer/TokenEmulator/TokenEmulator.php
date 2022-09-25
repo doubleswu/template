@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\Lexer\TokenEmulator;
 
@@ -19,7 +21,8 @@ abstract class TokenEmulator
      */
     abstract public function reverseEmulate(string $code, array $tokens): array;
 
-    public function preprocessCode(string $code, array &$patches): string {
+    public function preprocessCode(string $code, array &$patches): string
+    {
         return $code;
     }
 }

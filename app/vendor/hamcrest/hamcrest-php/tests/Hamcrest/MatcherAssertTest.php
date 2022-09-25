@@ -1,11 +1,11 @@
 <?php
+
 namespace Hamcrest;
 
 use PHPUnit\Framework\TestCase;
 
 class MatcherAssertTest extends TestCase
 {
-
     protected function setUp()
     {
         \Hamcrest\MatcherAssert::resetCount();

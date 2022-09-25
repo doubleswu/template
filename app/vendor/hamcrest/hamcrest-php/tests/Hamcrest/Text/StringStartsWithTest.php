@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class StringStartsWithTest extends \Hamcrest\AbstractMatcherTest
 {
-
     const EXCERPT = 'EXCERPT';
 
     private $_stringStartsWith;

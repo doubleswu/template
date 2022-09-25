@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Arrays;
 
 /*
@@ -9,7 +10,6 @@ use Hamcrest\Description;
 
 class MatchingOnce
 {
-
     private $_elementMatchers;
     private $_mismatchDescription;
 

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\Lexer\TokenEmulator;
 
@@ -22,8 +24,10 @@ abstract class KeywordEmulator extends TokenEmulator
     {
         $keywordString = $this->getKeywordString();
         foreach ($tokens as $i => $token) {
-            if ($token[0] === T_STRING && strtolower($token[1]) === $keywordString
-                    && $this->isKeywordContext($tokens, $i)) {
+            if (
+                $token[0] === T_STRING && strtolower($token[1]) === $keywordString
+                    && $this->isKeywordContext($tokens, $i)
+            ) {
                 $tokens[$i][0] = $this->getKeywordToken();
             }
         }

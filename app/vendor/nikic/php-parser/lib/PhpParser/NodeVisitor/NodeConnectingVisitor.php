@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace PhpParser\NodeVisitor;
 
@@ -26,12 +28,14 @@ final class NodeConnectingVisitor extends NodeVisitorAbstract
      */
     private $previous;
 
-    public function beforeTraverse(array $nodes) {
+    public function beforeTraverse(array $nodes)
+    {
         $this->stack    = [];
         $this->previous = null;
     }
 
-    public function enterNode(Node $node) {
+    public function enterNode(Node $node)
+    {
         if (!empty($this->stack)) {
             $node->setAttribute('parent', $this->stack[count($this->stack) - 1]);
         }
@@ -44,7 +48,8 @@ final class NodeConnectingVisitor extends NodeVisitorAbstract
         $this->stack[] = $node;
     }
 
-    public function leaveNode(Node $node) {
+    public function leaveNode(Node $node)
+    {
         $this->previous = $node;
 
         array_pop($this->stack);

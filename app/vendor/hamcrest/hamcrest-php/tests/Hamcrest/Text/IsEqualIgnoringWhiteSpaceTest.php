@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class IsEqualIgnoringWhiteSpaceTest extends \Hamcrest\AbstractMatcherTest
 {
-
     private $_matcher;
 
     protected function setUp()

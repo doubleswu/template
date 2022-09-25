@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Core;
 
 class AllOfTest extends \Hamcrest\AbstractMatcherTest
 {
-
     protected function createMatcher()
     {
         return \Hamcrest\Core\AllOf::allOf('irrelevant');

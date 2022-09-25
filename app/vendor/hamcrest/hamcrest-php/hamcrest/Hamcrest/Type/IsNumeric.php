@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Type;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Core\IsTypeOf;
  */
 class IsNumeric extends IsTypeOf
 {
-
     public function __construct()
     {
         parent::__construct('number');
@@ -49,6 +49,6 @@ class IsNumeric extends IsTypeOf
      */
     public static function numericValue()
     {
-        return new self;
+        return new self();
     }
 }

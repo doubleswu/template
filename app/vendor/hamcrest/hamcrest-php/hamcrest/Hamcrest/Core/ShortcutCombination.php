@@ -1,4 +1,5 @@
 <?php
+
 namespace Hamcrest\Core;
 
 /*
@@ -11,7 +12,6 @@ use Hamcrest\Util;
 
 abstract class ShortcutCombination extends BaseMatcher
 {
-
     /**
      * @var array<\Hamcrest\Matcher>
      */

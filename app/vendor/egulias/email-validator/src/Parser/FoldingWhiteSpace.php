@@ -1,4 +1,5 @@
 <?php
+
 namespace Egulias\EmailValidator\Parser;
 
 use Egulias\EmailValidator\EmailLexer;
@@ -13,7 +14,7 @@ use Egulias\EmailValidator\Result\Reason\ExpectingCTEXT;
 use Egulias\EmailValidator\Result\Result;
 use Egulias\EmailValidator\Result\ValidEmail;
 
-class  FoldingWhiteSpace extends PartParser
+class FoldingWhiteSpace extends PartParser
 {
     const FWS_TYPES = [
         EmailLexer::S_SP,
@@ -23,7 +24,7 @@ class  FoldingWhiteSpace extends PartParser
         EmailLexer::CRLF
     ];
 
-    public function parse() : Result
+    public function parse(): Result
     {
         if (!$this->isFWS()) {
             return new ValidEmail();
@@ -57,7 +58,7 @@ class  FoldingWhiteSpace extends PartParser
         return new ValidEmail();
     }
 
-    protected function checkCRLFInFWS() : Result
+    protected function checkCRLFInFWS(): Result
     {
         if ($this->lexer->token['type'] !== EmailLexer::CRLF) {
             return new ValidEmail();
@@ -74,8 +75,8 @@ class  FoldingWhiteSpace extends PartParser
 
         return new ValidEmail();
     }
-     
-    protected function isFWS() : bool
+
+    protected function isFWS(): bool
     {
         if ($this->escaped()) {
             return false;

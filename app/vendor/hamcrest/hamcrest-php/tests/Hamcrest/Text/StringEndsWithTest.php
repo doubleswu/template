@@ -1,9 +1,9 @@
 <?php
+
 namespace Hamcrest\Text;
 
 class StringEndsWithTest extends \Hamcrest\AbstractMatcherTest
 {
-
     const EXCERPT = 'EXCERPT';
 
     private $_stringEndsWith;
