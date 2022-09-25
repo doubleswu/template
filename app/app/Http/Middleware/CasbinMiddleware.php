@@ -2,9 +2,16 @@
 
 namespace App\Http\Middleware;
 
+use App\Helper\OutPutHelper;
+use App\Services\CasbinService;
 use Closure;
 use Illuminate\Http\Request;
+use Casbin\Enforcer;
+use CasbinAdapter\Database\Adapter;
 
+/**
+ * @desc 权限校验中间件
+ */
 class CasbinMiddleware
 {
     /**
@@ -16,6 +23,12 @@ class CasbinMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        return $next($request);
+        $enforcer = CasbinService::getInstances();
+        $allow = $enforcer -> enforce('doubleswu', $request -> path(), $request -> method());
+        if (!$allow) {
+            OutPutHelper::error(500, 'Not allow');
+        } else {
+            return $next($request);
+        }
     }
 }

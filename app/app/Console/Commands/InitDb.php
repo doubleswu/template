@@ -28,6 +28,5 @@ class InitDb extends Command
     public function handle()
     {
         // 创建数据库
-
     }
 }
