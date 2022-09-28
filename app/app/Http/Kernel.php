@@ -66,5 +66,6 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'AuthMiddleware' => \App\Http\Middleware\AuthMiddleware::class,
         'CasbinMiddleware' => \App\Http\Middleware\CasbinMiddleware::class,
+        'ApiSignMiddleware' => \App\Http\Middleware\ApiSignMiddleware::class,
     ];
 }

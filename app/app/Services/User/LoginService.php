@@ -6,9 +6,8 @@ use App\Exception\ErrorCode;
 use App\Exception\SourceException;
 use App\Helper\OpenSSLHelper;
 use App\Models\UsersModel;
-use App\Services\BaseService;
 
-class LoginService extends BaseService
+class LoginService
 {
     public function handler(array $params): array
     {
@@ -20,7 +19,8 @@ class LoginService extends BaseService
             throw SourceException::create(ErrorCode::USER_ACCOUNT_CMP_ERROR);
         }
         $encryptUserInfo = OpenSSLHelper::aesEncrypt(sprintf(
-            'user:%s:%d:%d',
+            '%s:%s:%d:%d',
+            env('USER_TOKEN_MARK'),
             $row -> user_name,
             $row -> id,
             time()

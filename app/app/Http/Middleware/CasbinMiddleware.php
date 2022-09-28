@@ -2,6 +2,9 @@
 
 namespace App\Http\Middleware;
 
+use App\Exception\ErrorCode;
+use App\Exception\RequestException;
+use App\Helper\CommonHelper;
 use App\Helper\OutPutHelper;
 use App\Services\CasbinService;
 use Closure;
@@ -23,12 +26,19 @@ class CasbinMiddleware
      */
     public function handle(Request $request, Closure $next)
     {
-        $enforcer = CasbinService::getInstances();
-        $allow = $enforcer -> enforce('doubleswu', $request -> path(), $request -> method());
-        if (!$allow) {
-            OutPutHelper::error(500, 'Not allow');
-        } else {
+        if (!env('ALLOW_VALIDATE_API_PERMISSION')) {
             return $next($request);
+        }
+        try {
+            $enforcer = CasbinService::getInstances();
+            $userInfo = CommonHelper::decryptLoginToken();
+            $allow = $enforcer -> enforce($userInfo['userName'], $request -> path(), $request -> method());
+            if (!$allow) {
+                throw RequestException::create(ErrorCode::PERMISSION_NOT_ALLOW);
+            }
+            return $next($request);
+        } catch (\Exception $e) {
+            OutPutHelper ::error($e -> getCode(), $e -> getMessage());
         }
     }
 }

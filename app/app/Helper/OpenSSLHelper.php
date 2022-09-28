@@ -41,6 +41,9 @@ class OpenSSLHelper
      */
     public static function aesDecrypt(string $content)
     {
+        if (empty($content)) {
+            return '';
+        }
         $decryptContent = base64_decode($content);
         $decryptContent = substr($decryptContent, 16);
         $aesSecret  = env('AES_ENCRYPT_SECRET');
