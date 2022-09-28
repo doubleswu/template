@@ -1,10 +1,18 @@
 ## 一、资源安装
+### 1、数据库相关
+#### a、Mysql表
 ```
 # 创建所有DB
 php artisan migrate
 
 php artisan make:migration tableName
 ```
+
+#### b、构建数据
+```
+php artisan project:InitDb
+```
+
 
 ## 二、接口文档
 ### 登录模块

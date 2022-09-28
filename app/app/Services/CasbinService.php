@@ -11,7 +11,7 @@ class CasbinService extends BaseService
      * @return Enforcer
      * @throws \Casbin\Exceptions\CasbinException
      */
-    public static function getInstances(): Enforcer
+    public static function getInstances(string $path = '../config/casbin/model.conf'): Enforcer
     {
         $config = [
             'type'     => 'mysql', // mysql,pgsql,sqlite,sqlsrv
@@ -22,7 +22,7 @@ class CasbinService extends BaseService
             'hostport' => env('DB_PORT'),
         ];
         $adapter = Adapter::newAdapter($config);
-        $enforcer = new Enforcer('../config/casbin/model.conf', $adapter);
+        $enforcer = new Enforcer($path, $adapter);
         return $enforcer;
     }
 }
