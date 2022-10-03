@@ -16,6 +16,9 @@ class ErrorCode
     # 权限相关
     public const PERMISSION_NOT_ALLOW = 200001;
 
+    # 微信相关
+    public const WX_API_REQUEST_ACCESS_TOKEN_EXCEPTION = 300001;
+
     public const MAP = [
         self::DEFAULT => 'Error',
         self::RESOURCE_NOT_FIND => '资源查询失败',
@@ -26,6 +29,7 @@ class ErrorCode
         self::REQUEST_PARAMS_TOKEN_EXCEPTION => 'Token异常',
         self::REQUEST_PARAMS_USER_LOGIN_NO_EXPIRE_TIME => '用户登陆超时，请重新登陆',
         self::PERMISSION_NOT_ALLOW => '您没有访问该模块的权限',
+        self::WX_API_REQUEST_ACCESS_TOKEN_EXCEPTION => '获取微信token异常',
     ];
 
     public static function getMessage(int $code)

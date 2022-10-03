@@ -22,7 +22,9 @@ Route::middleware(['ApiSignMiddleware','CasbinMiddleware']) -> group(function ()
     Route::get('/test', [\App\Http\Controllers\TestController::class , 'handler']);
 });
 
-// 不需要登陆的
+// 后台
 Route::middleware([]) -> group(function () {
     Route::get('/user/login', [\App\Http\Controllers\User\LoginController::class , 'handler']);
+    Route::get('/user/token', [\App\Http\Controllers\User\TokenController::class , 'handler']);
 });
+

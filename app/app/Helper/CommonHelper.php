@@ -13,7 +13,7 @@ class CommonHelper
     public static function decryptLoginToken(): array
     {
         $request = app(Request::class);
-        $userToken = OpenSSLHelper::aesDecrypt($request -> header('token'));
+        $userToken = OpenSSLHelper::aesDecrypt($request -> header('token') ?? '');
         list($mark , $userName , $userId , $loginTime) = explode(':', $userToken);
         return [
             'mark' => $mark,
