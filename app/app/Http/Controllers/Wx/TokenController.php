@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\User;
+namespace App\Http\Controllers\Wx;
 
 use App\Helper\OutPutHelper;
 use App\Http\Controllers\BaseController;
-use App\Services\User\LoginService;
-use App\Services\User\TokenService;
+use App\Services\Token\TokenService;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 
 class TokenController extends BaseController
 {

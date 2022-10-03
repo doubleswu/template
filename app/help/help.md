@@ -13,36 +13,6 @@ php artisan make:migration tableName
 php artisan project:InitDb
 ```
 
-#### c、Nginx配置
-```nginx
-server {
-    listen 443 ssl;
-    server_name api.likeghost.club;
-    root /www/code/template/app/public;
-    index index.php index.htm;
-    ssl_certificate  /ssl/app.pem;#证书pem路径
-    ssl_certificate_key /ssl/app.key;#证书key路径
-    ssl_session_timeout 5m;
-    ssl_ciphers ECDHE-RSA-AES128-GCM-SHA256:ECDHE:ECDH:AES:HIGH:!NULL:!aNULL:!MD5:!ADH:!RC4;
-    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
-    ssl_prefer_server_ciphers on;
-    location / {
-        index index.php index.html index.htm;
-        if (!-e $request_filename) {
-            rewrite  ^(.*)$  /index.php?s=/$1  last;
-        break;
-        }
-    }
-    location ~ ^(.+\.php)(.*)$ {
-        fastcgi_pass            127.0.0.1:9000;
-        fastcgi_index  index.php;
-        fastcgi_split_path_info       ^(.+\.php)(.*)$;
-        fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-        fastcgi_param PATH_INFO       $fastcgi_path_info;
-        include fastcgi_params;
-    }
-}
-```
 
 ## 二、接口文档
 ### 登录模块
@@ -100,8 +70,7 @@ http://xxx/api/user/token
     "msg": "",
     "requestId": null,
     "results": {
-        "session_key": "6sQmTUW2OkNDFjStOXjwNQ==",
-        "openid": "o0T265Zhupk6Up4EbtL8qcSlCK0g"
+        "token": "3455cd02385d9017cd485b4286b5b860",
     }
 }
 
