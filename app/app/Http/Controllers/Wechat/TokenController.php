@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Wx;
+namespace App\Http\Controllers\Wechat;
 
 use App\Helper\OutPutHelper;
 use App\Http\Controllers\BaseController;
+use App\Services\Token\BaseToken;
 use App\Services\Token\TokenService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;

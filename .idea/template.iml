@@ -125,6 +125,8 @@
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/psr/cache" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/casbin/database-adapter" />
       <excludeFolder url="file://$MODULE_DIR$/app/vendor/techone/database" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/guzzlehttp/uri-template" />
+      <excludeFolder url="file://$MODULE_DIR$/app/vendor/wechatpay/wechatpay" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

@@ -119,6 +119,8 @@
       <path value="$PROJECT_DIR$/app/vendor/psr/cache" />
       <path value="$PROJECT_DIR$/app/vendor/casbin/database-adapter" />
       <path value="$PROJECT_DIR$/app/vendor/techone/database" />
+      <path value="$PROJECT_DIR$/app/vendor/guzzlehttp/uri-template" />
+      <path value="$PROJECT_DIR$/app/vendor/wechatpay/wechatpay" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0">

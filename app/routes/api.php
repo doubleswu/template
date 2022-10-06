@@ -28,8 +28,3 @@ Route::middleware([]) -> group(function () {
 });
 
 
-// 微信相关
-Route::middleware([]) -> group(function () {
-    Route::get('/user/token', [\App\Http\Controllers\Wx\TokenController::class , 'handler']);
-});
-

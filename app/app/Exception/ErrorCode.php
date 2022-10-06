@@ -19,6 +19,7 @@ class ErrorCode
     # 微信相关
     public const WX_API_REQUEST_ACCESS_TOKEN_EXCEPTION = 300001;
     public const WX_SAVE_LOGIN_CACHE_EXCEPTION = 300002;
+    public const WX_REQUEST_API_HEADER_TOKEN_EXCEPTION = 300003;
 
     public const MAP = [
         self::DEFAULT => 'Error',
@@ -32,6 +33,7 @@ class ErrorCode
         self::PERMISSION_NOT_ALLOW => '您没有访问该模块的权限',
         self::WX_API_REQUEST_ACCESS_TOKEN_EXCEPTION => '获取微信token异常',
         self::WX_SAVE_LOGIN_CACHE_EXCEPTION => '服务器缓存Token异常',
+        self::WX_REQUEST_API_HEADER_TOKEN_EXCEPTION => '请求缺失token参数',
     ];
 
     public static function getMessage(int $code)

@@ -45,6 +45,7 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
         array (
             'Whoops\\' => 7,
             'Webmozart\\Assert\\' => 17,
+            'WeChatPay\\' => 10,
         ),
         'T' => 
         array (
@@ -136,6 +137,7 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
         ),
         'G' => 
         array (
+            'GuzzleHttp\\UriTemplate\\' => 23,
             'GuzzleHttp\\Psr7\\' => 16,
             'GuzzleHttp\\Promise\\' => 19,
             'GuzzleHttp\\' => 11,
@@ -190,6 +192,10 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
         'Webmozart\\Assert\\' => 
         array (
             0 => __DIR__ . '/..' . '/webmozart/assert/src',
+        ),
+        'WeChatPay\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/wechatpay/wechatpay/src',
         ),
         'TijsVerkoyen\\CssToInlineStyles\\' => 
         array (
@@ -450,6 +456,10 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
         array (
             0 => __DIR__ . '/..' . '/s1lentium/iptools/src',
         ),
+        'GuzzleHttp\\UriTemplate\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/guzzlehttp/uri-template/src',
+        ),
         'GuzzleHttp\\Psr7\\' => 
         array (
             0 => __DIR__ . '/..' . '/guzzlehttp/psr7/src',
@@ -552,13 +562,22 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
     public static $classMap = array (
         'App\\Console\\Commands\\InitDb' => __DIR__ . '/../..' . '/app/Console/Commands/InitDb.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
+        'App\\Exception\\ErrorCode' => __DIR__ . '/../..' . '/app/Exception/ErrorCode.php',
+        'App\\Exception\\RequestException' => __DIR__ . '/../..' . '/app/Exception/RequestException.php',
+        'App\\Exception\\SourceException' => __DIR__ . '/../..' . '/app/Exception/SourceException.php',
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
+        'App\\Helper\\CommonHelper' => __DIR__ . '/../..' . '/app/Helper/CommonHelper.php',
         'App\\Helper\\OpenSSLHelper' => __DIR__ . '/../..' . '/app/Helper/OpenSSLHelper.php',
+        'App\\Helper\\OutPutHelper' => __DIR__ . '/../..' . '/app/Helper/OutPutHelper.php',
+        'App\\Helper\\RequestHelper' => __DIR__ . '/../..' . '/app/Helper/RequestHelper.php',
+        'App\\Helper\\StringHelper' => __DIR__ . '/../..' . '/app/Helper/StringHelper.php',
         'App\\Http\\Controllers\\BaseController' => __DIR__ . '/../..' . '/app/Http/Controllers/BaseController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\TestController' => __DIR__ . '/../..' . '/app/Http/Controllers/TestController.php',
         'App\\Http\\Controllers\\User\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/User/LoginController.php',
+        'App\\Http\\Controllers\\Wechat\\TokenController' => __DIR__ . '/../..' . '/app/Http/Controllers/Wechat/TokenController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Middleware\\ApiSignMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/ApiSignMiddleware.php',
         'App\\Http\\Middleware\\AuthMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/AuthMiddleware.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\CasbinMiddleware' => __DIR__ . '/../..' . '/app/Http/Middleware/CasbinMiddleware.php',
@@ -570,12 +589,23 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\ValidateSignature' => __DIR__ . '/../..' . '/app/Http/Middleware/ValidateSignature.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Menu\\OrderStatus' => __DIR__ . '/../..' . '/app/Menu/OrderStatus.php',
+        'App\\Menu\\UserLevelScope' => __DIR__ . '/../..' . '/app/Menu/UserLevelScope.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
+        'App\\Models\\UsersModel' => __DIR__ . '/../..' . '/app/Models/UsersModel.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\Services\\BaseService' => __DIR__ . '/../..' . '/app/Services/BaseService.php',
+        'App\\Services\\CasbinService' => __DIR__ . '/../..' . '/app/Services/CasbinService.php',
+        'App\\Services\\Order\\GoodsService' => __DIR__ . '/../..' . '/app/Services/Order/GoodsService.php',
+        'App\\Services\\Order\\OrderService' => __DIR__ . '/../..' . '/app/Services/Order/OrderService.php',
+        'App\\Services\\Order\\PayServices' => __DIR__ . '/../..' . '/app/Services/Order/PayServices.php',
+        'App\\Services\\Token\\BaseToken' => __DIR__ . '/../..' . '/app/Services/Token/BaseToken.php',
+        'App\\Services\\Token\\TokenService' => __DIR__ . '/../..' . '/app/Services/Token/TokenService.php',
+        'App\\Services\\User\\LoginService' => __DIR__ . '/../..' . '/app/Services/User/LoginService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -1525,6 +1555,7 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
         'GuzzleHttp\\RequestOptions' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RequestOptions.php',
         'GuzzleHttp\\RetryMiddleware' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/RetryMiddleware.php',
         'GuzzleHttp\\TransferStats' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/TransferStats.php',
+        'GuzzleHttp\\UriTemplate\\UriTemplate' => __DIR__ . '/..' . '/guzzlehttp/uri-template/src/UriTemplate.php',
         'GuzzleHttp\\Utils' => __DIR__ . '/..' . '/guzzlehttp/guzzle/src/Utils.php',
         'Hamcrest\\Arrays\\IsArray' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArray.php',
         'Hamcrest\\Arrays\\IsArrayContaining' => __DIR__ . '/..' . '/hamcrest/hamcrest-php/hamcrest/Hamcrest/Arrays/IsArrayContaining.php',
@@ -5794,6 +5825,24 @@ class ComposerStaticInitadcb84c4dcec8875639499e7a304aea5
         'TijsVerkoyen\\CssToInlineStyles\\Css\\Rule\\Rule' => __DIR__ . '/..' . '/tijsverkoyen/css-to-inline-styles/src/Css/Rule/Rule.php',
         'UnhandledMatchError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/UnhandledMatchError.php',
         'ValueError' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/ValueError.php',
+        'WeChatPay\\Builder' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Builder.php',
+        'WeChatPay\\BuilderChainable' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/BuilderChainable.php',
+        'WeChatPay\\BuilderTrait' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/BuilderTrait.php',
+        'WeChatPay\\ClientDecorator' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/ClientDecorator.php',
+        'WeChatPay\\ClientDecoratorInterface' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/ClientDecoratorInterface.php',
+        'WeChatPay\\ClientJsonTrait' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/ClientJsonTrait.php',
+        'WeChatPay\\ClientXmlTrait' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/ClientXmlTrait.php',
+        'WeChatPay\\Crypto\\AesEcb' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Crypto/AesEcb.php',
+        'WeChatPay\\Crypto\\AesGcm' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Crypto/AesGcm.php',
+        'WeChatPay\\Crypto\\AesInterface' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Crypto/AesInterface.php',
+        'WeChatPay\\Crypto\\Hash' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Crypto/Hash.php',
+        'WeChatPay\\Crypto\\Rsa' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Crypto/Rsa.php',
+        'WeChatPay\\Exception\\InvalidArgumentException' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Exception/InvalidArgumentException.php',
+        'WeChatPay\\Exception\\WeChatPayException' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Exception/WeChatPayException.php',
+        'WeChatPay\\Formatter' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Formatter.php',
+        'WeChatPay\\Transformer' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Transformer.php',
+        'WeChatPay\\Util\\MediaUtil' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Util/MediaUtil.php',
+        'WeChatPay\\Util\\PemUtil' => __DIR__ . '/..' . '/wechatpay/wechatpay/src/Util/PemUtil.php',
         'Webmozart\\Assert\\Assert' => __DIR__ . '/..' . '/webmozart/assert/src/Assert.php',
         'Webmozart\\Assert\\InvalidArgumentException' => __DIR__ . '/..' . '/webmozart/assert/src/InvalidArgumentException.php',
         'Webmozart\\Assert\\Mixin' => __DIR__ . '/..' . '/webmozart/assert/src/Mixin.php',

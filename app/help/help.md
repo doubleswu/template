@@ -15,7 +15,7 @@ php artisan project:InitDb
 
 
 ## 二、接口文档
-### 登录模块
+### 后台模块
 #### 1、登陆接口
 - 请求方式: get
 - 请求链接
@@ -44,11 +44,12 @@ http://xxx/api/user/login
 }
 ```
 
-#### 2、小程序登陆
+### 小程序模块
+#### 1、小程序登陆
 - 请求方式: get
 - 请求链接
 ```
-http://xxx/api/user/token
+http://xxx/wechat   /user/token
 ```
 - 简介
   
